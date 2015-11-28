@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            font-family:Helvetica, Arial, sans-serif;
+        }
+
+        .ticker {
+            background:#3b7282 url("http://genesis-mining.github.io/img/bg.jpg") no-repeat;
+            background-size: cover;
+            border:1px solid #eee;
+            color:#fff;
+            display:inline-block;
+            padding:13px;
+            text-shadow: 1px 1px 0 #444
+        }
+
+        .ticker__exchange {
+            font-size:10px;
+        }
+
+        .ticker__img {
+            display:inline-block;
+            margin-right:10px;
+            vertical-align:middle;
+        }
+
+        .ticker__body {
+            display:inline-block;
+            vertical-align:middle;
+        }
+
+        .ticker__quota {
+            color:#fab445;
+            font-family: 'Signika', sans-serif;
+            font-size:34px;
+        }
+
+        .ticker__list {
+            color:#fff;
+            font-size:10px;
+        }
+
+        .ticker__list > li {
+            display:inline-block;
+            margin-right:5px;
+        }
+
+        .ticker__list > li:last-child {
+            margin-right:0;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- .ticker -->
+    <div class="ticker">
+        <img src="img/genesis-mining-icon.png" alt="" class="ticker__img" />
+
+        <div class="ticker__body">
+            <h2 class="ticker__exchange">#ExploreBitcoin</h2>
+            <h1 class="ticker__quota">
+                <span class="ticker__last">$000.00</span>
+            </h1>
+            <ul class="ticker__list">
+                <li>
+                    Bid: <strong><span class="ticker__bid">$000.00</span></strong>
+                </li>
+                <li>
+                    Ask: <strong><span class="ticker__ask">$000.00</span></strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.ticker -->
+
+    <script src="http://genesis-mining.github.io/components/jquery/dist/jquery.min.js"></script>
+    <script src="http://genesis-mining.github.io/components/pusher/dist/pusher.min.js"></script>
+    <script src="http://genesis-mining.github.io/components/lodash/lodash.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            font-family:Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            text-decoration:none;
+        }
+
+        .ticker {
+            background:#3b7282 url("http://genesis-mining.github.io/img/bg.jpg") no-repeat;
+            background-size: cover;
+            border:1px solid #eee;
+            color:#fff;
+            display:inline-block;
+            padding:13px;
+            text-align:center;
+            text-shadow: 1px 1px 0 #444
+        }
+
+        .ticker__body {
+            border-bottom:1px solid #fff;
+            margin-bottom:10px;
+            padding-bottom:10px;
+        }
+
+        .ticker__quota {
+            color:#fab445;
+            font-family: 'Signika', sans-serif;
+            font-size:58px;
+            line-height:1;
+        }
+
+        .ticker__list {
+            font-size:17px;
+            font-weight:bold;
+        }
+
+        .ticker__label {
+            color:#fab445;
+            font-family: 'Signika', sans-serif;
+        }
+
+        .ticker__list > li {
+            display:inline-block;
+            margin-right:5px;
+            vertical-align:middle;
+        }
+
+        .ticker__list > li:last-child {
+            margin-right:0;
+        }
+
+        .ticker__list > li > a {
+            color:#fab445;
+            display:block;
+        }
+
+        .ticker-foot__list {
+            font-family: 'Signika', sans-serif;
+            font-size:16px;
+        }
+
+        .ticker-foot__list > li {
+            display:inline-block;
+            vertical-align:middle;
+        }
+
+        .ticker-foot__list > li > a {
+            color:#fab445;
+            display:block;
+        }
+
+        .ticker-foot__list > li > a > img {
+            display:block;
+        }
+
+        .ticker__border {
+            background: #fab445;
+            height:24px;
+            margin:0 5px;
+            width:2px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- .ticker -->
+    <div class="ticker">
+        <div class="ticker__body">
+            <h1 class="ticker__quota">
+                <span class="ticker__last">$000.00</span>
+            </h1>
+            <ul class="ticker__list">
+                <li>
+                    <span class="ticker__label">Bid:</span> <span class="ticker__bid">$000.00</span>
+                </li>
+                <li>
+                    <span class="ticker__label">Ask:</span> <span class="ticker__ask">$000.00</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- .ticker-foot -->
+        <div class="ticker-foot">
+            <ul class="ticker-foot__list">
+                <li>
+                    <a href="https://www.genesis-mining.com/" title="Explore Bitcoin" target="_blank">
+                        <strong>#ExploreBitcoin</strong>
+                    </a>
+                </li>
+                <li class="ticker__border"></li>
+                <li>
+                    <a href="https://www.genesis-mining.com/" title="Genesis Mining" target="_blank">
+                        <img src="img/genesis-mining.png" alt="Genesis Mining" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.ticker-foot -->
+    </div>
+    <!-- /.ticker -->
+
+    <script src="http://genesis-mining.github.io/components/jquery/dist/jquery.min.js"></script>
+    <script src="http://genesis-mining.github.io/components/pusher/dist/pusher.min.js"></script>
+    <script src="http://genesis-mining.github.io/components/lodash/lodash.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
