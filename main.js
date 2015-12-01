@@ -4,24 +4,24 @@ $(document).ready(function() {
         trades_channel = pusher.subscribe('live_trades'),
         symbol = "$";
 
-    $.ajax({
-        type: "GET",
-        url: "http://query.yahooapis.com/v1/public/yql",
-        jsonp: "callback",
-        dataType: "jsonp",
-        data: {
-            q: 'select * from html where url = "https://www.bitstamp.net/api/ticker/"',
-            format: 'json'
-        },
-        success: function(response) {
-            var data = $.parseJSON(response.query.results.body),
-                last = data.last,
-                bid = data.bid,
-                ask = data.ask;
+    //$.ajax({
+    //    type: "GET",
+    //    url: "http://query.yahooapis.com/v1/public/yql",
+    //    jsonp: "callback",
+    //    dataType: "jsonp",
+    //    data: {
+    //        q: 'select * from html where url = "https://www.bitstamp.net/api/ticker/"',
+    //        format: 'json'
+    //    },
+    //    success: function(response) {
+    //        var data = $.parseJSON(response.query.results.body),
+    //            last = data.last,
+    //            bid = data.bid,
+    //            ask = data.ask;
 
-            $('.ticker__last').text(symbol + last);
-            $('.ticker__bid').text(symbol + bid);
-            $('.ticker__ask').text(symbol + ask);
+    //        $('.ticker__last').text(symbol + last);
+    //        $('.ticker__bid').text(symbol + bid);
+    //        $('.ticker__ask').text(symbol + ask);
 
             trades_channel.bind('trade', function(data) {
                 var last = (data.price).toFixed(2);
@@ -55,6 +55,6 @@ $(document).ready(function() {
                 console.log("Ask:", askMin);
                 $('.ticker__ask').text(symbol + askMin);
             });
-        }
-    });
+    //    }
+    //});
 });
